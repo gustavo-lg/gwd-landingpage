@@ -1,0 +1,48 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.contact{
+
+    &__btns {
+        display: block;
+        align-items: center;
+        text-align: -webkit-center;
+
+        a{
+            text-decoration:none;
+        }
+    }
+
+    &__btn {
+        display: block !important;
+        border-radius: 15px !important;
+        height: 155px;
+        width: 175px;
+        margin: 20px 0 !important;
+        background: $dark-blue  !important;
+
+        span {
+            margin: 0 !important;
+            padding-bottom: 5px;
+        }
+
+        span:hover {
+            background: transparent !important;
+        }
+
+        label {
+            color: $grey;
+            display: block;
+            font-size: 8px;
+        }
+
+        svg{
+            color: $light-blue;
+        }
+    }
+
+    &__btn:hover {
+        color: $light-blue;
+        background: $dark  !important;     
+    }
+}

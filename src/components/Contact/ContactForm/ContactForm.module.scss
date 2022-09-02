@@ -1,0 +1,58 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.form{
+    margin: 20px 5px 0px 70px;
+    @media (max-width: $desktop_xsm) {
+       margin: 0px !important;
+       height: auto;
+    }
+
+    height: 400px;
+    display: grid;
+    &__input{
+        @media (max-width: $desktop_xsm) {
+            width: fit-content !important; 
+         }
+        margin: 10px 0 !important;
+        width: 500px;
+        label{
+            color: $light-blue  !important;
+        }
+        fieldset{
+            border-color: $light-blue  !important;
+        }
+        input{
+            color: $white;
+        }
+    }
+    &__btn{
+        background-color: $light-blue  !important;
+        width: min-content;
+        margin: 10px 0 !important;
+        &:hover{
+            background-color: $dark-blue  !important;
+        }
+    }
+&__textarea{
+    color: $white;
+    resize: none;
+    border: 1px solid $light-blue;
+    min-height: 125px;
+    border-radius: 4px;
+    background: transparent;
+    padding: 13px;
+    font-size: 1rem;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+
+    &:focus-visible {
+        outline: none !important;
+    }
+    &::placeholder{
+        color: $light-blue  !important;
+        font-size: 1rem;
+        font-family: "Roboto","Helvetica","Arial",sans-serif;
+    }
+}
+    
+}

@@ -1,0 +1,61 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.portfolio {
+    padding: 80px $padding-horizontal;
+    text-align: -webkit-center;
+    @media (max-width: $desktop_xsm) {
+        padding: 20px 15px;
+    }
+
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+        padding: 20px $padding-horizontal-sm;
+    }
+
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+        padding: 20px $padding-horizontal-md;
+    }
+
+    &__tabs>div:nth-child(3)>div {
+        place-content: center;
+    }
+
+    @media (max-width: $desktop_xsm) {
+        &__tabs>div:nth-child(3)>div {
+            width: max-content;
+            place-content: center;
+        }
+
+        &__tabs>div:nth-child(1)>svg,
+        &__tabs>div:nth-child(4)>svg {
+            color: $white  !important;
+        }
+
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 2em;
+        color: $light-blue;
+    
+        &:before{
+            color: $grey;
+            content: "Conheça nossos serviços e valores";
+            font-size: 0.4em !important;
+            display: block;
+        }
+    }
+
+    &__tabs>div:nth-child(3)>span {
+        background-color: $light-blue  !important;
+    }
+
+    &__tab {
+        color: $white  !important;
+    }
+
+    &__tab--active {
+        color: $light-blue  !important;
+    }
+
+}

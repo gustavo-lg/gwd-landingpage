@@ -1,0 +1,40 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.contact{
+    padding: 20px $padding-horizontal;
+    place-content: center;
+
+    @media (max-width: $desktop_xsm) {
+        padding: 20px $padding-horizontal-mobile;
+    }
+
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+        padding: 20px $padding-horizontal-sm;
+    }
+
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+        padding: 20px $padding-horizontal-md;
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 2em;
+        color: $light-blue;
+    
+        &:before{
+            color: $grey;
+            content: "Fale conosco";
+            font-size: 0.4em !important;
+            display: block;
+        }
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        @media (max-width: $desktop_xsm) {
+            display: block;
+        }
+    }
+}

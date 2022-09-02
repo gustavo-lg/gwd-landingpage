@@ -1,0 +1,64 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.footer {
+    align-items: center;
+    text-align-last: center;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: auto;
+    background-color: $light-blue;
+    min-height: 400px;
+
+    @media (max-width: $desktop_xsm) {
+        padding: 20px $padding-horizontal-mobile;
+    }
+
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+        padding: 20px $padding-horizontal-sm;
+    }
+
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+        padding: 20px $padding-horizontal-md;
+    }
+
+    img{
+        @media (max-width: $desktop_xsm) {
+            margin-left: -35px;
+        }
+    }
+    &__logos {
+        margin: 40px 0px !important;
+    }
+    &__logo{
+        margin: 10px;
+        padding: 10px;
+        background: $dark;
+       border-radius: 11px;
+
+       svg{
+        display: block;
+       }
+    }
+    &__logo > a > svg{
+        width: 25px;
+        height: 25px;
+    }
+    ul {
+        text-align: center;
+        place-content: center;
+        align-items: center;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        line-height: normal;
+    }
+
+    &__copyright{
+        text-align: center;
+    }
+    
+
+}

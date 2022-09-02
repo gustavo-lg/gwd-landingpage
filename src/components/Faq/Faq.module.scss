@@ -1,0 +1,59 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.faq {
+    margin: 50px 0;
+    height: 600px;
+    text-align: -webkit-center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px $padding-horizontal;
+    @media (max-width: $desktop_xsm) {
+        padding: 20px 15px;
+    }
+
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+        padding: 20px $padding-horizontal-sm;
+    }
+
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+        padding: 20px $padding-horizontal-md;
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 2em;
+        color: $light-blue;
+    
+        &:before{
+            color: $grey;
+            content: "tire suas dúvidas";
+            font-size: 0.4em !important;
+            display: block;
+        }
+    }
+    &__btn > div > div > svg{
+        color: $light-blue;
+    }
+    &__btn {
+        background-color: $dark-blue  !important;
+        color: $white  !important;
+        width: 600px;
+        margin: 10px 0;
+        border-radius: 8px !important;
+        @media (max-width: $desktop_xsm) {
+            width: auto;
+        }
+
+        &__label {
+            color: $white  !important;
+            text-align: left;
+        }
+    }
+
+    svg{
+        position: relative;
+        top: 5px;
+        color: $light-blue  !important;
+    }
+}

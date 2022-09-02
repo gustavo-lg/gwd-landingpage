@@ -1,0 +1,99 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.header {
+    display: flex;
+    padding: 20px $padding-horizontal;
+    place-content: center;
+
+    @media (max-width: $desktop_xsm) {
+        padding: 20px $padding-horizontal-mobile;
+    }
+
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+        padding: 20px $padding-horizontal-sm;
+    }
+
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+        padding: 20px $padding-horizontal-md;
+    }
+
+    &__banner {
+        padding: 50px 0;
+        margin: 50px 0;
+        background: $dark-blue;
+        background: linear-gradient(180deg, rgba(77, 180, 255, 1) 0%, rgba(77, 180, 255, 0.5) 25%, rgba(77, 180, 255, 0.034) 53%, rgba(77, 180, 255, 0.021) 80%, rgba(77, 180, 255, 0.014) 90%, rgba(77, 180, 255, 0) 100%);
+        border-top-left-radius: 190px;
+        border-top-right-radius: 190px;
+
+        img {
+            width: inherit;
+        }
+    }
+
+    &__logo {
+        place-content: center;
+        display: grid;
+        top: -20px;
+        position: relative;
+
+        &:after {
+            content: 'Soluções Digitais';
+            color: $white;
+            text-align: center;
+        }
+    }
+
+    ul {
+        text-align: center;
+        align-items: center;
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        line-height: normal;
+    }
+
+    a {
+        text-decoration: none;
+        color: $white;
+        padding: 20px;
+        font-weight: 600;
+    }
+
+    @media (max-width: $desktop_xsm) {
+        &__btns {
+            place-content: center;
+            display: flex;
+        }
+    }
+
+    &__btns {
+        a {
+            padding: 0 !important;
+        }
+    }
+
+    &__btnPlan {
+        border: 1px solid $light-blue  !important;
+        color: $light-blue  !important;
+        font-weight: 600 !important;
+        &:hover{
+            color: $dark-blue  !important;
+            border: 1px solid $dark-blue  !important;
+        }
+    }
+
+    &__btnContact {
+        background-color: $light-blue  !important;
+        &:hover{
+            background-color: $dark-blue  !important;
+        }
+    }
+
+    button {
+        width: 150px;
+        margin: 5px;
+        padding: 10px;
+    }
+}

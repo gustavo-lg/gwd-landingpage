@@ -1,0 +1,10 @@
+body {
+  background-color: #161426;
+  margin: 0px;
+  background-image: url(../public/bg-texture.png);
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

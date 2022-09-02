@@ -1,0 +1,167 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.about {
+    display: flex;
+    padding: 80px $padding-horizontal;
+    place-content: center;
+    justify-content: space-evenly;
+
+    @media (max-width: $desktop_xsm) {
+        display: grid;
+        text-align: -webkit-center;
+    }
+
+    @media (max-width: $desktop_xsm) {
+        padding: 20px $padding-horizontal-mobile;
+    }
+
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+        padding: 20px $padding-horizontal-sm;
+    }
+
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+        padding: 20px $padding-horizontal-md;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 2em;
+        color: $light-blue;
+
+        &:before {
+            color: $grey;
+            content: "conheça melhor";
+            font-size: 0.4em !important;
+            display: block;
+        }
+    }
+
+    &__team {
+        width: 400px;
+        height: 400px;
+        background: rgb(77, 180, 255);
+        background: linear-gradient(180deg, rgba(77, 180, 255, 1) 0%, rgba(77, 181, 255, 0.76) 25%, rgba(77, 181, 255, 0.384) 53%, rgba(77, 181, 255, 0.253) 80%, rgba(77, 181, 255, 0.115) 90%, rgba(77, 180, 255, 0) 100%);
+        border-radius: 15px;
+        place-self: center;
+
+        @media (max-width: $desktop_xsm) {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+            margin-right: 50px;
+        }
+
+        @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+            margin-right: 50px;
+        }
+    }
+
+    &__teamImg {
+        width: 400px;
+        height: 400px;
+        background-color: $dark-blue;
+        border-radius: 15px;
+        transform: rotate(10deg);
+        place-self: center;
+        transition: 500ms;
+
+        &:hover {
+            transform: rotate(0deg);
+            transition: 500ms;
+        }
+
+        @media (max-width: $desktop_xsm) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        place-content: center;
+    }
+
+    &__text {
+        color: $white;
+        padding: 10px;
+        width: 500px;
+        margin: 20px 0;
+
+        @media (max-width: $desktop_xsm) {
+            width: auto;
+            padding: 0px;
+            text-align: justify;
+        }
+    }
+
+    &__btnContact {
+        background-color: $light-blue  !important;
+        &:hover {
+            background-color: $dark-blue  !important;
+        }
+        margin-left: 12px !important;
+    }
+
+    @media (max-width: $desktop_xsm) {
+        &__btns {
+            display: block;
+        }
+    }
+
+    &__btn {
+        display: block !important;
+        border-radius: 15px !important;
+        height: 155px;
+        width: 175px;
+        margin: 10px !important;
+        background: $dark-blue  !important;
+
+        span {
+            margin: 0 !important;
+            padding-bottom: 5px;
+        }
+
+        span:hover {
+            background: transparent !important;
+        }
+
+        label {
+            color: $grey;
+            display: block;
+            font-size: 8px;
+        }
+
+        svg {
+            color: $light-blue;
+        }
+
+    }
+
+    &__btn:hover {
+        color: $light-blue;
+        background: $dark  !important;
+    }
+
+    &__modal {
+        border: 1px solid $light-blue  !important;
+        border-radius: 8px;
+        background-color: $dark  !important;
+        box-shadow: unset !important;
+
+        @media (max-width: $desktop_xsm) {
+            width: 235px !important;
+        }
+
+
+        &__text {
+            color: $white;
+        }
+    }
+
+}

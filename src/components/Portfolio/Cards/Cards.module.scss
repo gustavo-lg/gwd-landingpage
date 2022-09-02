@@ -1,0 +1,41 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.cards{
+    display: flex;
+    place-content: center;
+    color: $white;
+
+    @media (max-width: $desktop_xsm) {
+        padding: 20px 15px;
+        display: block;
+    }
+
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+        padding: 20px $padding-horizontal-sm;
+    }
+
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+        padding: 20px $padding-horizontal-md;
+    }
+    &__card{
+        border-radius: 15px;
+        margin: 20px 20px 60px 20px;
+        width: 245px;
+        &__icon{
+            color: $light-blue;
+            text-align: center;
+        }
+        &__icon svg{
+            width: 2em !important;
+            height: 2em !important;
+        }
+        &__title{
+            color: $light-blue;
+            text-align: center;
+        }
+        &__price{
+            text-align: center;
+        }
+    }
+}
