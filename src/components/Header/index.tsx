@@ -8,7 +8,10 @@ export default function Header() {
             <ul>
                 <li>
                     <div className={styles.header__logo}>
-                        <img src={require('assets/logo.png')} alt='logo' />
+                        <div>
+                            <img className={styles.header__logoIcon} src={require('assets/logoIcon.png')} alt='logo' />
+                            <img src={require('assets/logoText.png')} alt='logo' />
+                        </div>  
                     </div>
                 </li>
                 <li className={styles.header__btns}>

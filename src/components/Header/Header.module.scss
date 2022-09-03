@@ -42,7 +42,30 @@
             color: $white;
             text-align: center;
         }
+
+        img:nth-child(1) {
+            width: 90px;
+        }
+
+
+        img:nth-child(1) {
+            animation-name: rotate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+
+        img:nth-child(1):after {
+            transform: rotate(-57deg);
+        }
+
+        img:nth-child(1):before {
+            transform: rotate(57deg);
+        }
     }
+
+
 
     ul {
         text-align: center;
@@ -78,7 +101,8 @@
         border: 1px solid $light-blue  !important;
         color: $light-blue  !important;
         font-weight: 600 !important;
-        &:hover{
+
+        &:hover {
             color: $dark-blue  !important;
             border: 1px solid $dark-blue  !important;
         }
@@ -86,7 +110,8 @@
 
     &__btnContact {
         background-color: $light-blue  !important;
-        &:hover{
+
+        &:hover {
             background-color: $dark-blue  !important;
         }
     }
@@ -95,5 +120,12 @@
         width: 150px;
         margin: 5px;
         padding: 10px;
+    }
+}
+
+@keyframes rotate {
+
+    100% {
+        transform: rotate(360deg);
     }
 }

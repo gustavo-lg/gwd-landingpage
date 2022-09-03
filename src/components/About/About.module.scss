@@ -44,20 +44,15 @@
         background: linear-gradient(180deg, rgba(77, 180, 255, 1) 0%, rgba(77, 181, 255, 0.76) 25%, rgba(77, 181, 255, 0.384) 53%, rgba(77, 181, 255, 0.253) 80%, rgba(77, 181, 255, 0.115) 90%, rgba(77, 180, 255, 0) 100%);
         border-radius: 15px;
         place-self: center;
+        margin-right: 100px;
 
         @media (max-width: $desktop_xsm) {
             width: 200px;
             height: 200px;
             margin-bottom: 30px;
+            margin-right: 0px;
         }
 
-        @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-            margin-right: 50px;
-        }
-
-        @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-            margin-right: 50px;
-        }
     }
 
     &__teamImg {

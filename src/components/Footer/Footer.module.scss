@@ -11,6 +11,27 @@
     background-color: $light-blue;
     min-height: 400px;
 
+    img:nth-child(1) {
+        width: 90px;
+    }
+
+
+    img:nth-child(1) {
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+    }
+
+    img:nth-child(1):after {
+        transform: rotate(-57deg);
+    }
+
+    img:nth-child(1):before {
+        transform: rotate(57deg);
+    }
+
     @media (max-width: $desktop_xsm) {
         padding: 20px $padding-horizontal-mobile;
     }
@@ -23,28 +44,32 @@
         padding: 20px $padding-horizontal-md;
     }
 
-    img{
+    img {
         @media (max-width: $desktop_xsm) {
             margin-left: -35px;
         }
     }
+
     &__logos {
         margin: 40px 0px !important;
     }
-    &__logo{
+
+    &__logo {
         margin: 10px;
         padding: 10px;
         background: $dark;
-       border-radius: 11px;
+        border-radius: 11px;
 
-       svg{
-        display: block;
-       }
+        svg {
+            display: block;
+        }
     }
-    &__logo > a > svg{
+
+    &__logo>a>svg {
         width: 25px;
         height: 25px;
     }
+
     ul {
         text-align: center;
         place-content: center;
@@ -56,9 +81,14 @@
         line-height: normal;
     }
 
-    &__copyright{
+    &__copyright {
         text-align: center;
     }
-    
+}
 
+@keyframes rotate {
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
