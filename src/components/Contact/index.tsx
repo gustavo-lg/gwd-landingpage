@@ -6,8 +6,8 @@ export default function Contact() {
     return <div className={styles.contact} id='contact'>
         <h2 className={styles.contact__title}>Entre em contato</h2>
         <div className={styles.contact__container}>
-        <ContactBtns />
-        <ContactForm />
+            <ContactBtns />
+            <ContactForm />
         </div>
     </div>
 }

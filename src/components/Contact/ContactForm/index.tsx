@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 
 export default function ContactForm() {
-    const form = useRef<any>();
+    const form = useRef<HTMLFormElement | any>();
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -17,7 +17,8 @@ export default function ContactForm() {
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
-            });
+            }
+        );
     };
     return <div>
         <form

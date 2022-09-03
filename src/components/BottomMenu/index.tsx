@@ -3,97 +3,71 @@ import ViewQuiltIcon from '@mui/icons-material/ViewQuilt';
 import QuizIcon from '@mui/icons-material/Quiz';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import FactCheckIcon from '@mui/icons-material/FactCheck';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import { useState } from 'react';
 import styles from './BottomMenu.module.scss';
 import { Link } from 'react-scroll';
 
 export default function BottomMenu() {
-    const [navigation, setNavigation] = useState<number | null>(null);
 
     return (
         <>
             <div className={styles.bottomMenu__overlay} />
-            <BottomNavigation
-                className={styles.bottomMenu}
-                showLabels
-                value={navigation}
-                onChange={(event, newNavigation) => {
-                    setNavigation(newNavigation);
-                }}
-            >
+            <div className={styles.bottomMenu}>
                 <Link
-                    className={styles.bottomMenu__link}
+                    className={styles.bottomMenu__btn}
                     to="about"
                     spy={true}
                     smooth={true}
                     offset={-100}
                     duration={500}
                 >
-                    <BottomNavigationAction
-                        className={styles.bottomMenu__btn}
-                        label="Sobre"
-                        icon={<SupervisedUserCircleIcon />}
-                    />
+                    <SupervisedUserCircleIcon />
+                    <div>Sobre</div>
                 </Link>
                 <Link
-                    className={styles.bottomMenu__link}
+                    className={styles.bottomMenu__btn}
                     to="plans"
                     spy={true}
                     smooth={true}
                     offset={-50}
                     duration={500}
                 >
-                    <BottomNavigationAction
-                        className={styles.bottomMenu__btn}
-                        label="Planos"
-                        icon={<FactCheckIcon />}
-                    />
+                    <FactCheckIcon />
+                    <div>Planos</div>
                 </Link>
                 <Link
-                    className={styles.bottomMenu__link}
+                    className={styles.bottomMenu__btn}
                     to="portfolio"
                     spy={true}
                     smooth={true}
                     offset={-50}
                     duration={500}
                 >
-                    <BottomNavigationAction
-                        className={styles.bottomMenu__btn}
-                        label="Portfólio"
-                        icon={<ViewQuiltIcon />}
-                    />
+                    <ViewQuiltIcon />
+                    <div>Portfólio</div>
                 </Link>
                 <Link
-                    className={styles.bottomMenu__link}
+                    className={styles.bottomMenu__btn}
                     to="contact"
                     spy={true}
                     smooth={true}
                     offset={-50}
                     duration={500}
                 >
-                    <BottomNavigationAction
-                        className={styles.bottomMenu__btn}
-                        label="Contato"
-                        icon={<ChatIcon />}
-                    />
+                    <ChatIcon />
+                    <div>Contato</div>
                 </Link>
                 <Link
-                    className={styles.bottomMenu__link}
+                    className={styles.bottomMenu__btn}
                     to="faq"
                     spy={true}
                     smooth={true}
                     offset={-50}
                     duration={500}
                 >
-                    <BottomNavigationAction
-                        className={styles.bottomMenu__btn}
-                        label="FAQ"
-                        icon={<QuizIcon />}
-                    />
+                    <QuizIcon />
+                    <div>FAQ</div>
                 </Link>
-            </BottomNavigation>
+            </div>
         </>
     )
 }
