@@ -2,11 +2,13 @@
     {
         "link": "https://wa.me/5548999875260",
         "title": "WhatsApp",
-        "label": "Fale com nosso consultor"
+        "label": "Fale com nosso consultor",
+        "id": "1"
     },
     {
         "link": "mailto:agenciagwd@gmail.com",
         "title": "E-mail",
-        "label": "Envie um e-mail para nós"
+        "label": "Envie um e-mail para nós",
+        "id": "2"
     }
 ]

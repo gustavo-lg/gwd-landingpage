@@ -22,6 +22,7 @@ export default function Header() {
                             smooth={true}
                             offset={-50}
                             duration={500}
+                            key={btns.to}
                         >
                             <Button
                                 className={btns.className}

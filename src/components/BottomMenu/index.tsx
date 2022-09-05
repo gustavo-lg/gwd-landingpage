@@ -21,6 +21,7 @@ export default function BottomMenu() {
                         smooth={true}
                         offset={-100}
                         duration={500}
+                        key={btns.to}
                     >
                         {btns.label === "Sobre" ? <SupervisedUserCircleIcon /> : null}
                         {btns.label === "Planos" ? <FactCheckIcon /> : null}

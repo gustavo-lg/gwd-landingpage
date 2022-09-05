@@ -13,7 +13,7 @@ export default function Footer() {
             </div>
             <ul className={styles.footer__logos}>
                 {logo.map(links => (
-                    <li className={styles.footer__logo}>
+                    <li key={links.label} className={styles.footer__logo}>
                         <a href={links.link}>
                             {links.label === "fb" ? <Facebook /> : null}
                             {links.label === "ig" ? <Instagram /> : null}
