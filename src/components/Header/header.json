@@ -1,0 +1,12 @@
+[
+    {
+        "to": "plans",
+        "className": "btnPlan",
+        "label": "Planos"
+    },
+    {
+        "to": "contact",
+        "className": "btnContact",
+        "label": "Fale Conosco"
+    }
+]

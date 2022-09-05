@@ -95,25 +95,27 @@
         a {
             padding: 0 !important;
         }
-    }
-
-    &__btnPlan {
-        border: 1px solid $light-blue  !important;
-        color: $light-blue  !important;
-        font-weight: 600 !important;
-
-        &:hover {
-            color: $dark-blue  !important;
-            border: 1px solid $dark-blue  !important;
+        a:nth-child(1) button:nth-child(1) {
+            border: 1px solid $light-blue  !important;
+            color: $light-blue  !important;
+            font-weight: 600 !important;
+    
+            &:hover {
+                color: $dark-blue  !important;
+                border: 1px solid $dark-blue  !important;
+            }
         }
-    }
-
-    &__btnContact {
-        background-color: $light-blue  !important;
-
-        &:hover {
-            background-color: $dark-blue  !important;
+        a:nth-child(2) button:nth-child(1) {
+            border: 1px solid $light-blue  !important;
+            background-color: $light-blue  !important;
+            color: $white;
+    
+            &:hover {
+                border: 1px solid $dark-blue  !important;
+                background-color: $dark-blue  !important;
+            }
         }
+        
     }
 
     button {

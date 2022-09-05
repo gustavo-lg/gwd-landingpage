@@ -1,0 +1,22 @@
+[
+    {
+        "to": "about",
+        "label": "Sobre"
+    },
+    {
+        "to": "plans",
+        "label": "Planos"
+    },
+    {
+        "to": "portfolio",
+        "label": "Portfólio"
+    },
+    {
+        "to": "contact",
+        "label": "Contato"
+    },
+    {
+        "to": "faq",
+        "label": "FAQ"
+    }
+]
