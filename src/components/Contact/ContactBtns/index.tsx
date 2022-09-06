@@ -12,7 +12,7 @@ export default function ContactBtns() {
                 <Button
                     className={styles.contact__btn}
                     variant="contained"
-                    startIcon={contactBtns.title === "Whatsapp" ? <WhatsAppIcon /> : <EmailOutlinedIcon />}>
+                    startIcon={contactBtns.title === "WhatsApp" ? <WhatsAppIcon /> : <EmailOutlinedIcon />}>
                     {contactBtns.title}
                     <label>{contactBtns.label}</label>
                 </Button>
