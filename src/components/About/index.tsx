@@ -58,7 +58,7 @@ export default function About() {
 
                     <div className={styles.about__text}>
                         A GWD esta sempre atrás de soluções inovadoras com revitalização de Projetos, Worksite e social media.
-                        Nosso diferencial está na habilidade de análise e entendimento da necessidade do nosso cliente, portanto,
+                        Nosso diferencial está na habilidade de análise e entendimento da necessidade do nosso cliente.
                     </div>
                     <Link
                         to="contact"

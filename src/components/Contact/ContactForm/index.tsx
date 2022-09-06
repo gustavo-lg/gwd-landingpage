@@ -32,6 +32,7 @@ export default function ContactForm() {
                 id="outlined-basic"
                 label="Nome"
                 variant="outlined"
+                name="name"
                 required
             />
             <TextField
@@ -40,6 +41,16 @@ export default function ContactForm() {
                 id="outlined-basic"
                 label="E-mail"
                 variant="outlined"
+                name="email"
+                required
+            />
+            <TextField
+                className={styles.form__input}
+                type="tel"
+                id="outlined-basic"
+                label="Telefone"
+                variant="outlined"
+                name="tel"
                 required
             />
             <TextareaAutosize

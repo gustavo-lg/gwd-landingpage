@@ -8,7 +8,6 @@
     bottom: 0px;
     height: 100%;
     width: auto;
-    background-color: $light-blue;
     min-height: 400px;
 
     img:nth-child(1) {
@@ -83,6 +82,7 @@
 
     &__copyright {
         text-align: center;
+        color: $white;
     }
 }
 

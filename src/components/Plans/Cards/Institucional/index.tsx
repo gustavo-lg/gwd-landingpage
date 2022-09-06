@@ -1,5 +1,7 @@
 import styles from '../Cards.module.scss'
 import Icon from '@mui/icons-material/BusinessCenter';
+import { Button } from '@mui/material';
+import { Link } from 'react-scroll';
 
 export default function Institucional() {
     return <div className={styles.cards}>
@@ -11,6 +13,17 @@ export default function Institucional() {
                 Já percebeu que todas as grandes empresas possuem seu próprio site? Inclusive seu concorrente.
                 Isso demonstra mais profissionalismo e credibilidade para a empresa.
             </div>
+            <Link
+                to='contact'
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+            >
+                <Button variant='contained' className={styles.cards__card__btn}>
+                    Consultar
+                </Button>
+            </Link>
         </div>
     </div>
 }

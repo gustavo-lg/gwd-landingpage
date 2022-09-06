@@ -102,7 +102,7 @@ export default function Plans() {
                   [styles.plans__tab]: true,
                   [styles['plans__tab--active']]: value === '5' ? true : false
                 })}
-                label="Outros"
+                label="Personalização"
                 value="5"
                 icon={<MoreHorizIcon />}
               />
