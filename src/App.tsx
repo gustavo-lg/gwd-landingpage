@@ -1,3 +1,4 @@
+import WhatsApp from 'components/WhatsApp';
 import About from 'components/About';
 import BottomMenu from 'components/BottomMenu';
 import Contact from 'components/Contact';
@@ -18,6 +19,7 @@ function App() {
       <Portfolio />
       <Contact />
       <Faq />
+      <WhatsApp />
       <BottomMenu />
       <Footer />
     </main>
