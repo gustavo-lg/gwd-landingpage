@@ -1,14 +1,41 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from './ContactForm.module.scss';
 import TextField from '@mui/material/TextField';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import { IMaskInput } from 'react-imask';
+
+interface CustomProps {
+    onChange: (event: { target: { name: string; value: string } }) => void;
+    name: string;
+}
+
+const TextMaskCustom = React.forwardRef<HTMLElement, CustomProps>(
+    function TextMaskCustom(props, ref) {
+        const { onChange, ...other } = props;
+        return (
+            <IMaskInput
+                {...other}
+                mask="(00) 00000-0000"
+                definitions={{
+                    '#': /[1-9]/,
+                }}
+                inputRef={ref as any}
+                onAccept={(value: any) => onChange({ target: { name: props.name, value } })}
+                overwrite
+            />
+        );
+    },
+);
 
 export default function ContactForm() {
+    const [values, setValues] = useState<string>('');
+    const handleChangeForm = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setValues(e.target.value);
+    };
     const form = useRef<HTMLFormElement | any>(null);
-
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -20,35 +47,7 @@ export default function ContactForm() {
             }
             );
     };
-    const handleKeyboardEvent = (e: any) => {
-        let tecla = e.key;
-        let telefone = e.target.value.replace(/\D+/g, "");
-        if (e.which !== 8 && e.which !== 46) {
-            if (e.which < 48 || e.which > 57) {
-                e.preventDefault();
-            }
-        }
-        if (/^[0-9]$/i.test(tecla)) {
-            telefone = telefone + tecla;
-            let tamanho = telefone.length;
 
-            if (tamanho > 10) {
-                telefone = telefone.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
-            } else if (tamanho > 5) {
-                telefone = telefone.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
-            } else if (tamanho > 2) {
-                telefone = telefone.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
-            } else {
-                telefone = telefone.replace(/^(\d*)/, "($1");
-            }
-
-            e.target.value = telefone;
-        }
-
-        if (!["Backspace", "Delete"].includes(tecla)) {
-            return false;
-        }
-    }
     return <div>
         <form
             className={styles.form}
@@ -75,13 +74,17 @@ export default function ContactForm() {
             />
             <TextField
                 className={styles.form__input}
-                onKeyDown={handleKeyboardEvent}
                 type="tel"
                 id="outlined-basic"
                 label="Telefone"
                 variant="outlined"
                 name="tel"
-                inputProps={{ maxLength: 12 }}
+                inputProps={{ maxLength: 15 }}
+                InputProps={{
+                    inputComponent: TextMaskCustom as any,
+                }}
+                value={values}
+                onChange={handleChangeForm}
                 required
             />
             <TextareaAutosize
