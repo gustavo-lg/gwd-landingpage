@@ -45,15 +45,10 @@
 
         img:nth-child(1) {
             width: 90px;
-        }
-
-
-        img:nth-child(1) {
             animation-name: rotate;
             animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
-
         }
 
         img:nth-child(1):after {

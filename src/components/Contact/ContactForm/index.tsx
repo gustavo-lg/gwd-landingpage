@@ -42,6 +42,8 @@ export default function ContactForm() {
         emailjs.sendForm('gwd_gmail', 'template_yl2umrd', form.current, 'mI3yhcSVtx942vlOc')
             .then((result) => {
                 console.log(result.text);
+                document.querySelector("#contact")?.remove();
+                alert('Em 24 horas estaremos entrando em contato, obrigado =D!')
             }, (error) => {
                 console.log(error.text);
             }

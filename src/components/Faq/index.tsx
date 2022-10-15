@@ -11,6 +11,7 @@ import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlin
 import StarsOutlinedIcon from '@mui/icons-material/StarsOutlined';
 import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOutlined';
 import ChangeCircleOutlinedIcon from '@mui/icons-material/ChangeCircleOutlined';
+import Shield from '@mui/icons-material/Shield';
 
 export default function Faq() {
     const [expanded, setExpanded] = useState<string | false>(false);
@@ -61,7 +62,7 @@ export default function Faq() {
                 <AccordionDetails>
                     <Typography
                         className={styles.faq__btn__label}>
-                        Depende, cada projeto é um projeto. O desenvolvimento de um e-commerce é diferente de um Blog. Logo acima podemos ver que tem diversos tipos de site, e cada um tem sua complexidade de desenvolvimento, além dos seus desejos como cliente.
+                        Depende, cada projeto é um projeto. O desenvolvimento de um e-commerce é diferente de um Blog. Nós realizamos calls com nossos clientes para entender a dor do mesmo e chegar a um orçamento ideal.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -81,7 +82,7 @@ export default function Faq() {
                 <AccordionDetails>
                     <Typography
                         className={styles.faq__btn__label}>
-                        Todos os sites são desenvolvimento com as mais atuais técnicas de SEO, no qual, resulta nos  melhores resultados nos organismos de busca como o Google.
+                        Todos os sites são desenvolvimento com as mais atuais técnicas de SEO, no qual, resulta nos melhores resultados nos organismos de busca como o Google, que é aonde vamos indexar o site gratuitamente. 
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -127,6 +128,28 @@ export default function Faq() {
                         className={styles.faq__btn__label}>
                         Sim, após a entrega, forneçeremos tutoriais de usabilidade do site junto do acesso administrativo, para que você possa mexer e fazer as alterações que desejar.
                         Caso desejar uma personalização fora do orçamento, a mesma tera custo e prazo adicional. 
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion
+                className={styles.faq__btn}
+                expanded={expanded === 'panel6'}
+                onChange={handleChange('panel6')}>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel3bh-content"
+                    id="panel3bh-header"
+                >
+                    <Typography
+                        className={styles.faq__btn__label}
+                        sx={{ color: 'text.secondary' }}>
+                         <Shield/> É confiavel/seguro?
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography
+                        className={styles.faq__btn__label}>
+                        Sim, nós realizamos calls antes de gerar um orçamento para o cliente e caso aprove é feito um Contrato para asegurar ambas as partes. 
                     </Typography>
                 </AccordionDetails>
             </Accordion>

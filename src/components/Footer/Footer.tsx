@@ -7,14 +7,14 @@ import logo from './footer.json';
 export default function Footer() {
     return (
         <div className={styles.footer}>
-            <div>
-                <img className={styles.header__logoIcon} src={require('assets/logoIcon.png')} alt='logo' />
+            <div className={styles.footer__gwdLogo}>
+                <img className={styles.footer__logoIcon} src={require('assets/logoIcon.png')} alt='logo' />
                 <img src={require('assets/logoText.png')} alt='logo' />
             </div>
             <ul className={styles.footer__logos}>
                 {logo.map(links => (
                     <li key={links.label} className={styles.footer__logo}>
-                        <a href={links.link}>
+                        <a href={links.link} target='_blank' rel="noreferrer">
                             {links.label === "fb" ? <Facebook /> : null}
                             {links.label === "ig" ? <Instagram /> : null}
                             {links.label === "in" ? <Linkedin /> : null}

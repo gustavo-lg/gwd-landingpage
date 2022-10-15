@@ -151,6 +151,8 @@
 
         @media (max-width: $desktop_xsm) {
             width: 235px !important;
+            max-height: 300px;
+            overflow-y: scroll;
         }
 
 

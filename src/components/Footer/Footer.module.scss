@@ -9,26 +9,36 @@
     height: 100%;
     width: auto;
     min-height: 400px;
+    
 
-    img:nth-child(1) {
-        width: 90px;
-    }
+    &__gwdLogo {
+        place-content: center;
+        display: grid;
+        top: -20px;
+        position: relative;
 
+        &:after {
+            content: 'Soluções Digitais';
+            color: $white;
+            text-align: center;
+        }
 
-    img:nth-child(1) {
-        animation-name: rotate;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        img:nth-child(1) {
+            width: 90px;
+            place-self: center;
+            animation-name: rotate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
 
-    }
+        img:nth-child(1):after {
+            transform: rotate(-57deg);
+        }
 
-    img:nth-child(1):after {
-        transform: rotate(-57deg);
-    }
-
-    img:nth-child(1):before {
-        transform: rotate(57deg);
+        img:nth-child(1):before {
+            transform: rotate(57deg);
+        }
     }
 
     @media (max-width: $desktop_xsm) {

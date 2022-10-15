@@ -95,7 +95,16 @@ export default function About() {
                             className={styles.about__modal__text}
                             id="modal-modal-description"
                             sx={{ mt: 2 }}>
-                            Somos uma startup que surgiu através de um grupo de três amigos, especializada em consultoria e criação de sites.
+                            <p>
+                            A GWD nasceu no ano de 2011, tendo como seu fundador o Sr. Gabriel Oliveira e sociedade com seu colega de trabalho Gustavo Gonçalves.  Ambos com sua vasta experiência no mercado de sites, marketing e designer, com muitos parceiros e um plano de negocio diferenciado com objetivos agressivos, para trazer um novo conceito ao mercado de sites. A pesar de ser uma empresa “jovem”, se orgulha hoje por estar em expansão e ter construído um projeto de negocio solido que inclui contrato.
+                            </p>
+                            <p>
+                            Nosso slogan “Soluções” traduz o trabalho de nossos clientes, por ser uma empresa especializada no atendimento e sites, temos como clientes empresários, investidores e CEOS de diversas empresas, e entendemos que são pessoas que necessitam tomar decisões todos os dias, efetuar escolhas, que em sua maioria impactam diretamente na saúde do negocio e em seus resultados, por isso estamos aqui, como conselheiros para apresentar entender a necessidade de dor do cliente, apresentar oportunidades no mercado que atuamos e auxiliar nossos clientes a fazerem uma grande escolha.
+                            </p>
+                            <p>
+                            Acreditamos em nosso time, não somos apenas uma equipe focada e determinada, temos o conceito de família, estamos dispostos a vencer juntos, a gerar resultados positivos a nossos clientes, que em sua maioria acabam entrando para nossa família.
+                            </p>
+
                         </Typography>
                     </Box>
                 </Modal>
@@ -120,8 +129,12 @@ export default function About() {
                             className={styles.about__modal__text}
                             id="modal-modal-description"
                             sx={{ mt: 2 }}>
+                            <p>
                             Nós trabalhamos com reuniões online para entender melhor a dor e desejo do cliente.
+                            </p>
+                            <p>
                             Também oferecemos gratuitamente 2 meses de suporte aos serviços implantados.
+                            </p>
                         </Typography>
                     </Box>
                 </Modal>

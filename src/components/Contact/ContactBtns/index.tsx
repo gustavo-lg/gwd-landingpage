@@ -8,7 +8,7 @@ import btns from './contactBtns.json'
 export default function ContactBtns() {
     return <div className={styles.contact__btns}>
         {btns.map(contactBtns => (
-            <a href={contactBtns.link} key={contactBtns.id}>
+            <a href={contactBtns.link} key={contactBtns.id} target='_blank' rel="noreferrer">
                 <Button
                     className={styles.contact__btn}
                     variant="contained"
