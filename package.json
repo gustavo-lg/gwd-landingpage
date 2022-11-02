@@ -1,5 +1,6 @@
 {
   "name": "gwd-landingpage",
+  "homepage": "https://gwdsolucoes.com.br/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
