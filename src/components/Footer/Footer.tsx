@@ -12,8 +12,8 @@ export default function Footer() {
                 <img src={require('assets/logoText.png')} alt='logo' />
             </div>
             <ul className={styles.footer__logos}>
-                {logo.map(links => (
-                    <li key={links.label} className={styles.footer__logo}>
+                {logo.map((links, index) => (
+                    <li key={index} className={styles.footer__logo}>
                         <a href={links.link} target='_blank' rel="noreferrer">
                             {links.label === "fb" ? <Facebook /> : null}
                             {links.label === "ig" ? <Instagram /> : null}

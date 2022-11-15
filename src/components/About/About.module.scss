@@ -96,10 +96,12 @@
     }
 
     &__btnContact {
-        background-color: $light-blue  !important;
+        background-color: $light-blue !important;
+
         &:hover {
-            background-color: $dark-blue  !important;
+            background-color: $dark-blue !important;
         }
+
         margin-left: 12px !important;
     }
 
@@ -115,7 +117,7 @@
         height: 155px;
         width: 175px;
         margin: 10px !important;
-        background: $dark-blue  !important;
+        background: $dark-blue !important;
 
         span {
             margin: 0 !important;
@@ -140,21 +142,17 @@
 
     &__btn:hover {
         color: $light-blue;
-        background: $dark  !important;
+        background: $dark !important;
     }
 
     &__modal {
-        border: 1px solid $light-blue  !important;
+        border: 1px solid $light-blue !important;
         border-radius: 8px;
-        background-color: $dark  !important;
+        background-color: $dark !important;
         box-shadow: unset !important;
-
-        @media (max-width: $desktop_xsm) {
-            width: 235px !important;
-            max-height: 300px;
-            overflow-y: scroll;
-        }
-
+        max-width: 235px !important;
+        max-height: 300px;
+        overflow-y: scroll;
 
         &__text {
             color: $white;

@@ -58,6 +58,14 @@
             }
         }
 
+        &__outros {
+            text-align: center;
+            display: grid;
+            &::before{
+                display: none;
+            } 
+        }
+
         &__btn {
             border: 1px solid $light-blue  !important;
             background-color: $light-blue  !important;

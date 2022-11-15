@@ -53,12 +53,6 @@
         padding: 20px $padding-horizontal-md;
     }
 
-    img {
-        @media (max-width: $desktop_xsm) {
-            margin-left: -35px;
-        }
-    }
-
     &__logos {
         margin: 40px 0px !important;
     }

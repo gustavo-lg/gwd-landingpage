@@ -16,13 +16,13 @@ export default function Header() {
                     </div>
                 </li>
                 <li className={styles.header__btns}>
-                    {header.map(btns => (
+                    {header.map((btns, index) => (
                         <Link
                             to={btns.to}
                             smooth={true}
                             offset={-50}
                             duration={500}
-                            key={btns.to}
+                            key={index}
                         >
                             <Button
                                 className={btns.className}

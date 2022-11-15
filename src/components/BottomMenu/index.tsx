@@ -13,7 +13,7 @@ export default function BottomMenu() {
         <>
             <div className={styles.bottomMenu__overlay} />
             <div className={styles.bottomMenu}>
-                {bottomMenu.map(btns => (
+                {bottomMenu.map((btns, index) => (
                     <Link
                         className={styles.bottomMenu__btn}
                         to={btns.to}
@@ -21,7 +21,7 @@ export default function BottomMenu() {
                         smooth={true}
                         offset={-100}
                         duration={500}
-                        key={btns.to}
+                        key={index}
                     >
                         {btns.label === "Sobre" ? <SupervisedUserCircleIcon /> : null}
                         {btns.label === "Planos" ? <FactCheckIcon /> : null}

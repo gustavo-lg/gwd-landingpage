@@ -8,7 +8,7 @@ export default function Outros() {
         <div className={styles.cards__card}>
             <div className={styles.cards__card__icon}><Icon /></div>
             <h2 className={styles.cards__card__title}>Personalizações</h2>
-            <h1 className={styles.cards__card__price}>R$ Sob Análise</h1>
+            <h1 className={styles.cards__card__outros}>R$ Sob Análise</h1>
             <div>
                 Ficamos a disposição para conversamos sobre suas ideias e projetos.
             </div>
