@@ -5,6 +5,7 @@
     display: flex;
     place-content: center;
     color: $white;
+    margin-top: 50px;
 
     @media (max-width: $desktop_xsm) {
         padding: 20px 15px;
@@ -18,11 +19,24 @@
     @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
         padding: 20px $padding-horizontal-md;
     }
+    &__title{
+        max-width: 240px;
+        color: $light-blue;
+        min-height: 56px;
+    }
     &__card{
+        &:hover{
+            transform: scale(1.1);
+            transition: 800ms;
+        }
+        transition: 800ms;
         border-radius: 15px;
-        margin: 20px 20px 60px 20px;
+        margin-bottom: 20px;
+        @media (min-width: $desktop_xsm){
+            margin: 20px 20px 60px 20px;
+        }       
         width: 245px;
-        max-height: 450px;
+        max-height: 430px;
         &__icon{
             color: $light-blue;
             text-align: center;

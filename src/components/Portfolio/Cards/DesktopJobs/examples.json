@@ -1,14 +1,22 @@
 [
     {
-        "src": "agileDesktop.png"
+        "title": "Landing Page",
+        "src": "agileDesktop.png",
+        "link": "https://agiledpvat.com.br/"
     },
     {
-        "src": "exataDesktop.png"
+        "title": "Template Jurerê Vistasoft - Personalizado",
+        "src": "exataDesktop.png",
+        "link": "https://exataimobiliaria.com.br/"
     },
     {
-        "src": "conquistaDesktop.png"
+        "title": "Template Jurerê Vistasoft - Personalizado",
+        "src": "conquistaDesktop.png",
+        "link": "https://imobiliariaconquistars.com.br/"
     },
     {
-        "src": "marcosOteroDesktop.png"
+        "title": "Template Jurerê Vistasoft - Personalizado",
+        "src": "marcosOteroDesktop.png",
+        "link": "https://marcosoteroimoveis.vistatemporario.com.br/"
     }
 ]
